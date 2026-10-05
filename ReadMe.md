@@ -124,6 +124,7 @@ https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Portfolio%
 
 ### Segment Risk Analysis
 
+https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Segment%20Risk%20Analysis.png
 
 ### Manual Review Queue
 
