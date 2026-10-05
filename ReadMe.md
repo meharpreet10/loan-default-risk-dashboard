@@ -24,11 +24,15 @@ The project follows an end-to-end analytics workflow:
 ├── powerbi/ — the .pbix dashboard file
 └── *.png — dashboard screenshots
 
-**Project Files:**
-📄 [SQL Script](sql/loan_default_risk_queries.sql)
-📊 [Power BI File](powerbi/Loan_Default_Risk_Dashboard.pbix)
-📁 [Raw Dataset](data/loan_applications_raw.csv)
 
+## Project Files
+
+- 📄 **[SQL Analysis](https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/loan-default-risk-sql-1.sql)**
+- 📊 **[Power BI Dashboard](https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/loan-default-risk-PowerBI-1.pbix)** 
+- 📁 **[Raw Dataset](https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/loan_applications_raw.csv)**
+
+---
+  
 ## Tech Stack
 
 - **MySQL** — Data cleaning, transformation, feature engineering, and risk analysis
@@ -127,8 +131,6 @@ Missing CIBIL is treated as a risk signal rather than being ignored because the 
 ---
 
 ## Dashboard
-
-### Overview
 
 ### Overview
 
