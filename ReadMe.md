@@ -127,6 +127,7 @@ https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Portfolio%
 
 ### Manual Review Queue
 
+https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Manual%20Review%20Queue.png
 
 ---
 
