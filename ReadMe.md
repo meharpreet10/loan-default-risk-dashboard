@@ -18,6 +18,17 @@ The project follows an end-to-end analytics workflow:
 
 ---
 
+## Repository Structure
+├── sql/ — cleaning + extraction queries
+├── data/ — raw synthetic dataset
+├── powerbi/ — the .pbix dashboard file
+└── *.png — dashboard screenshots
+
+**Project Files:**
+📄 [SQL Script](sql/loan_default_risk_queries.sql)
+📊 [Power BI File](powerbi/Loan_Default_Risk_Dashboard.pbix)
+📁 [Raw Dataset](data/loan_applications_raw.csv)
+
 ## Tech Stack
 
 - **MySQL** — Data cleaning, transformation, feature engineering, and risk analysis
@@ -108,8 +119,7 @@ Only segments with at least 10 applications are considered to avoid drawing conc
 An application is flagged when at least one of the following is present:
 
 - Documentation is incomplete
-- CIBIL score is below 650
-- CIBIL score is missing (are marked as 0)
+- CIBIL score is below 650, or missing from the application
 - Loan amount is greater than ₹200,000
 
 Missing CIBIL is treated as a risk signal rather than being ignored because the absence of credit-history information itself may require additional verification.
@@ -120,15 +130,17 @@ Missing CIBIL is treated as a risk signal rather than being ignored because the 
 
 ### Overview
 
-https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Portfolio%20Overview.png
+### Overview
+
+![Portfolio Overview](Portfolio%20Overview.png)
 
 ### Segment Risk Analysis
 
-https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Segment%20Risk%20Analysis.png
+![Segment Risk Analysis](Segment%20Risk%20Analysis.png)
 
 ### Manual Review Queue
 
-https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Manual%20Review%20Queue.png
+![Manual Review Queue](Manual%20Review%20Queue.png)
 
 ---
 
@@ -142,3 +154,12 @@ Data modeling • DAX • Calculated columns • Measures • KPI design • Int
 
 **Business Analytics:**  
 Credit risk analysis • Customer segmentation • Risk identification • Manual review prioritization • Data-quality validation
+
+---
+
+## Limitations & Future Improvements
+
+- This project uses a synthetic dataset rather than real loan portfolio data, so findings reflect patterns built into the simulation rather than actual market behavior.
+- The analysis is a single snapshot in time rather than a historical repayment-behavior time series; a production version would track rolling delinquency trends per customer over time.
+- The "high-risk segment" threshold (≥20% default rate) was chosen as a reasonable cutoff for this dataset size, not derived from a formal cost-benefit or statistical model — a real deployment would calibrate this against the credit team's actual review capacity and the cost of a missed default vs. an unnecessary review.
+- With more time, I'd validate the segment-based risk rules against a held-out time period to check they generalize, rather than relying on the same data used to define them.
