@@ -120,15 +120,13 @@ Missing CIBIL is treated as a risk signal rather than being ignored because the 
 
 ### Overview
 
-
+https://github.com/meharpreet10/loan-default-risk-dashboard/blob/main/Portfolio%20Overview.png
 
 ### Segment Risk Analysis
 
-![Segment Risk Analysis](screenshots/02_segment_risk_analysis.png)
 
 ### Manual Review Queue
 
-![Manual Review Queue](screenshots/03_manual_review_queue.png)
 
 ---
 
